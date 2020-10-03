@@ -1,0 +1,80 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2020.10.03 14:58:29 =~=~=~=~=~=~=~=~=~=~=~=
+login as: tlipke
+Pre-authentication banner message from server:
+| Access to Brooklyn College computers is restricted to authorized users
+|         and approved educational and research purposes, only.
+End of banner message from server
+tlipke@146.245.252.28's password: 
+Last login: Sun Sep 27 21:38:50 2020 from ool-4575541d.dyn.optonline.net
+
+]0;tlipke@sol28:~[?1034h[tlipke@sol28 ~]$ ls
+BlogLab.html  [0m[01;34mDownloads[0m         LabTerminal5     [01;32mmyscript.sh[0m       [01;34mpublic_html[0m
+[01;34mcisc3115[0m      [01;34mfontconfig[0m        LinkedList.java  [01;34mNetBeansProjects[0m  [01;34mTemplates[0m
+[01;34mDesktop[0m       HelloWorld.class  log              [01;34mnewpublic_html[0m    [01;34mVideos[0m
+[01;34mdoc[0m           HelloWorld.java   [01;34mMusic[0m            [01;34mPictures[0m
+[01;34mDocuments[0m     [01;34mLab5Terminal[0m      [01;34mMyCalendars[0m      [01;34mPublic[0m
+]0;tlipke@sol28:~[tlipke@sol28 ~]$ 
+
+]0;tlipke@sol28:~[tlipke@sol28 ~]$ [Kgit clone https://github.com/TristianLipkeBC/RepoMeta.git
+Cloning into 'RepoMeta'...
+remote: Enumerating objects: 3, done.[K
+remote: Counting objects:  33% (1/3)[K
+remote: Counting objects:  66% (2/3)[K
+remote: Counting objects: 100% (3/3)[K
+remote: Counting objects: 100% (3/3), done.[K
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0[K
+Unpacking objects:  33% (1/3)   
+Unpacking objects:  66% (2/3)   
+Unpacking objects: 100% (3/3)   
+Unpacking objects: 100% (3/3), done.
+]0;tlipke@sol28:~[tlipke@sol28 ~]$ ls
+BlogLab.html  [0m[01;34mDownloads[0m         LabTerminal5     [01;32mmyscript.sh[0m       [01;34mpublic_html[0m
+[01;34mcisc3115[0m      [01;34mfontconfig[0m        LinkedList.java  [01;34mNetBeansProjects[0m  [01;34mRepo1[0m
+[01;34mDesktop[0m       HelloWorld.class  log              [01;34mnewpublic_html[0m    [01;34mRepoMeta[0m
+[01;34mdoc[0m           HelloWorld.java   [01;34mMusic[0m            [01;34mPictures[0m          [01;34mTemplates[0m
+[01;34mDocuments[0m     [01;34mLab5Terminal[0m      [01;34mMyCalendars[0m      [01;34mPublic[0m            [01;34mVideos[0m
+
+]0;tlipke@sol28:~[tlipke@sol28 ~]$ cd Repoet[[[KMeta
+]0;tlipke@sol28:~/RepoMeta[tlipke@sol28 RepoMeta]$ ls
+README.md
+]0;tlipke@sol28:~/RepoMeta[tlipke@sol28 RepoMeta]$ mkdir Repo1
+]0;tlipke@sol28:~/RepoMeta[tlipke@sol28 RepoMeta]$ ls
+README.md  [0m[01;34mRepo1[0m
+]0;tlipke@sol28:~/RepoMeta[tlipke@sol28 RepoMeta]$ cd Repo1 
+]0;tlipke@sol28:~/RepoMeta/Repo1[tlipke@sol28 Repo1]$ nano Hello[KWorld.java
+[?1049h[1;43r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.3.1             File: HelloWorld.java                                [41;36H[ New File ]
+[42d^G(B[m Get Help  (B[0;7m^O(B[m WriteOut  (B[0;7m^R(B[m Read File (B[0;7m^Y(B[m Prev Page (B[0;7m^K(B[m Cut Text  (B[0;7m^C(B[m Cur Pos
+[43d(B[0;7m^X(B[m Exit[14G(B[0;7m^J(B[m Justify   (B[0;7m^W(B[m Where Is  (B[0;7m^V(B[m Next Page (B[0;7m^U(B[m UnCut Text(B[0;7m^T(B[m To Spell
+[3d[1;73H(B[0;7mModified
+[3d(B[mclass HelloWorld
+[4d{[5;5H// Your program begins with a call to main().[6;5H// Prints "Hello, World" to the terminal window.[7;5Hpublic static void main(String args[])[8;5H{[9d	System.out.println("Hello, World");[10;5H}
+[11d}
+[41d[K[11d} [A [A[A[A[A[A[[Aass H	lloWorl	 
+[4d{ 
+[5d    // 	our pro	ram beg	ns w[6d to	the ter	inal wi	dow. 
+[
+	
+[K [6;41r[41;1H
+[1;
+	
+[K [[5d [6d [5;41r[41;1H
+[1;43r[4;3H[A[4d[5d[6d[7d[8d[9d
+[10d[A[A[A       	System.	ut.prin	ln("Hel	o, Worl	! Todu");[47Ga");[y");[Z [Z");[K[");[K");[K[47")a");[47Gy");[ ");[Zis Oct");[55Go");[b");[Zer 3rd");[63G,");[ ");[Z2020! ");[71")
+[41d(B[0;7mSave modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                      [42;1H Y(B[m Yes[K
+[43d(B[0;7m N(B[m No  [14G   (B[0;7m^C(B[m Cancel[K[41;62H
+(B[0;7mFile Name to Write: HelloWorld.java                         
+[42d^G(B[m Get Help[42;21H(B[0;7mM-D(B[m DOS Format	(B[0;7mM-A(B[m Append[42;61H(B[0;7mM-B(B[m Backup File
+[43d(B[0;7m^C(B[m Cancel	    (B[0;7mM-M(B[m Mac Format	(B[0;7mM-P(B[m Prepend[41;36H
+[42d[39;49m(B[m[J[1;73H(B[0;7m        [41;32H(B[m[1K	(B[0;7m[ Wrote 7 lines ](B[m[K[43;82H[43;1H[?1049l
+[?1l>]0;tlipke@sol28:~/RepoMeta/Repo1[tlipke@sol28 Repo1]$ javac Hello[KWorld.java
+]0;tlipke@sol28:~/RepoMeta/Repo1[tlipke@sol28 Repo1]$ java HelloWorld
+Hello, World! Today is October 3rd, 2020!
+
+]0;tlipke@sol28:~/RepoMeta/Repo1[tlipke@sol28 Repo1]$ cd - 
+/users1/st/tlipke/RepoMeta
+]0;tlipke@sol28:~/RepoMeta[tlipke@sol28 RepoMeta]$ nano Task1Log.txt
+[?1049h[1;43r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.3.1              File: Task1Log.txt                                  [41;36H[ New File ]
+[42d^G(B[m Get Help  (B[0;7m^O(B[m WriteOut  (B[0;7m^R(B[m Read File (B[0;7m^Y(B[m Prev Page (B[0;7m^K(B[m Cut Text  (B[0;7m^C(B[m Cur Pos
+[43d(B[0;7m^X(B[m Exit[14G(B[0;7m^J(B[m Justify   (B[0;7m^W(B[m Where Is  (B[0;7m^V(B[m Next Page (B[0;7m^U(B[m UnCut Text(B[0;7m^T(B[m To Spell
+[3d
+

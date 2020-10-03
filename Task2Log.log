@@ -1,0 +1,61 @@
+]0;tlipke@sol28:~/RepoMeta[tlipke@sol28 RepoMeta]$ l[[Kmkdir Repo2
+]0;tlipke@sol28:~/RepoMeta[tlipke@sol28 RepoMeta]$ cd Repo[K2 
+]0;tlipke@sol28:~/RepoMeta/Repo2[tlipke@sol28 Repo2]$ svaadmin create .
+bash: svaadmin: command not found...
+]0;tlipke@sol28:~/RepoMeta/Repo2[tlipke@sol28 Repo2]$ svnadmiin create .
+bash: svnadmiin: command not found...
+Similar command is: 'svnadmin'
+]0;tlipke@sol28:~/RepoMeta/Repo2[tlipke@sol28 Repo2]$ svnadmin create .
+]0;tlipke@sol28:~/RepoMeta/Repo2[tlipke@sol28 Repo2]$ svn co repository_link .
+svn: E125002: 'repository_link' does not appear to be a URL
+]0;tlipke@sol28:~/RepoMeta/Repo2[tlipke@sol28 Repo2]$ svn co https://github.com/TristianLipkeBC/RepoMeta.git .
+A    branches
+A    trunk
+A    trunk/README.md
+A    trunk/Repo1
+A    trunk/Repo1/HelloWorld.class
+A    trunk/Repo1/HelloWorld.java
+A    trunk/Task1Log.txt
+Checked out revision 2.
+]0;tlipke@sol28:~/RepoMeta/Repo2[tlipke@sol28 Repo2]$ mkdir trunk 
+mkdir: cannot create directory ‘trunk’: File exists
+]0;tlipke@sol28:~/RepoMeta/Repo2[tlipke@sol28 Repo2]$ ls
+[0m[01;34mbranches[0m  [01;34mconf[0m  [01;34mdb[0m  format  [01;34mhooks[0m  [01;34mlocks[0m  README.txt  [01;34mtrunk[0m
+]0;tlipke@sol28:~/RepoMeta/Repo2[tlipke@sol28 Repo2]$ cd trunk
+]0;tlipke@sol28:~/RepoMeta/Repo2/trunk[tlipke@sol28 trunk]$ ls
+README.md  [0m[01;34mRepo1[0m  Task1Log.txt
+]0;tlipke@sol28:~/RepoMeta/Repo2/trunk[tlipke@sol28 trunk]$ n[[Ktouch [K[Kfile.t[Kxt
+]0;tlipke@sol28:~/RepoMeta/Repo2/trunk[tlipke@sol28 trunk]$ nan[Ko file.txt
+[?1049h[1;43r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.3.1               File: file.txt                                      [41;34H[ Read 0 lines ]
+[42d^G(B[m Get Help  (B[0;7m^O(B[m WriteOut  (B[0;7m^R(B[m Read File (B[0;7m^Y(B[m Prev Page (B[0;7m^K(B[m Cut Text  (B[0;7m^C(B[m Cur Pos
+[43d(B[0;7m^X(B[m Exit[14G(B[0;7m^J(B[m Justify   (B[0;7m^W(B[m Where Is  (B[0;7m^V(B[m Next Page (B[0;7m^U(B[m UnCut Text(B[0;7m^T(B[m To Spell
+[3d[1;74H(B[0;7mModified
+[3d(B[mclass HelloWorld
+[4d{[5;5H// Your program begins with a call to main().[6;5H// Prints "Hello, World" to the terminal window.[7;5Hpublic static void main(String args[])[8;5H{[9d	System.out.println("Hello, World");[10;5H}
+[11d}
+[41d[K[11d} 
+[12d[A[A[8d[A[A[A[A{[5d   /	our pro	ram be[6d	rld" to	the ter	ina[7[Aal[K
+	
+[K [6;41r[41;1H
+[1;43r[5;51H[[5;3
+	
+[K    
+[41d(B[0;7mSave modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                       [42;1H Y(B[m Yes[K
+[43d(B[0;7m N(B[m No  [14G   (B[0;7m^C(B[m Cancel[K[41;62H
+(B[0;7mFile Name to Write: file.txt                                
+[42d^G(B[m Get Help[42;21H(B[0;7mM-D(B[m DOS Format	(B[0;7mM-A(B[m Append[42;61H(B[0;7mM-B(B[m Backup File
+[43d(B[0;7m^C(B[m Cancel	    (B[0;7mM-M(B[m Mac Format	(B[0;7mM-P(B[m Prepend[41;29H
+[42d[39;49m(B[m[J[1;74H(B[0;7m        [41;33H(B[m[1K (B[0;7m[ Wrote 8 lines ](B[m[K[43;83H[43;1H[?1049l
+[?1l>]0;tlipke@sol28:~/RepoMeta/Repo2/trunk[tlipke@sol28 trunk]$ cd ..
+]0;tlipke@sol28:~/RepoMeta/Repo2[tlipke@sol28 Repo2]$ svn add trunk
+svn: warning: W150002: '/users1/st/tlipke/RepoMeta/Repo2/trunk' is already under version control
+svn: E200009: Could not add all targets because some targets are already versioned
+svn: E200009: Illegal target for the requested operation
+]0;tlipke@sol28:~/RepoMeta/Repo2[tlipke@sol28 Repo2]$ c[[Kls
+[0m[01;34mbranches[0m  [01;34mconf[0m  [01;34mdb[0m  format  [01;34mhooks[0m  [01;34mlocks[0m  README.txt  [01;34mtrunk[0m
+]0;tlipke@sol28:~/RepoMeta/Repo2[tlipke@sol28 Repo2]$ cd trunk
+]0;tlipke@sol28:~/RepoMeta/Repo2/trunk[tlipke@sol28 trunk]$ ls
+file.txt  README.md  [0m[01;34mRepo1[0m  Task1Log.txt
+]0;tlipke@sol28:~/RepoMeta/Repo2/trunk[tlipke@sol28 trunk]$ vim[[[[Kvim file.txt
+
+
