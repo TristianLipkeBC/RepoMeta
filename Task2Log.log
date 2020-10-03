@@ -59,3 +59,494 @@ file.txt  README.md  [0m[01;34mRepo1[0m  Task1Log.txt
 ]0;tlipke@sol28:~/RepoMeta/Repo2/trunk[tlipke@sol28 trunk]$ vim[[[[Kvim file.txt
 
 
+[tlipke@sol28 Repo2]$ mkdir trunk2
+[tlipke@sol28 Repo2]$ ls
+branches  conf  db  format  hooks  locks  README.txt  trunk  trunk2
+[tlipke@sol28 Repo2]$ cd trunk2
+[tlipke@sol28 trunk2]$ touch example.txt
+[tlipke@sol28 trunk2]$ vim example.txt
+[tlipke@sol28 trunk2]$ cd ..
+[tlipke@sol28 Repo2]$ svn add trunk2
+A         trunk2
+A         trunk2/example.txt
+[tlipke@sol28 Repo2]$ svn commit
+svn: E205007: Commit failed (details follow):
+svn: E205007: Could not use external editor to fetch log message; consider setting the $SVN_EDITOR environment variable or using the --message (-m) or --file (-F) options
+svn: E205007: None of the environment variables SVN_EDITOR, VISUAL or EDITOR are set, and no 'editor-cmd' run-time configuration option was found
+[tlipke@sol28 Repo2]$ svn commit trunk2
+svn: E205007: Commit failed (details follow):
+svn: E205007: Could not use external editor to fetch log message; consider setting the $SVN_EDITOR environment variable or using the --message (-m) or --file (-F) options
+svn: E205007: None of the environment variables SVN_EDITOR, VISUAL or EDITOR are set, and no 'editor-cmd' run-time configuration option was found
+[tlipke@sol28 Repo2]$ svn commit -F
+svn: missing argument: F
+Type 'svn help' for usage.
+[tlipke@sol28 Repo2]$ svn commit -m
+svn: missing argument: m
+Type 'svn help' for usage.
+[tlipke@sol28 Repo2]$ svn commit -m 'example'
+Authentication realm: <https://github.com:443> GitHub
+Password for 'tlipke':
+Authentication realm: <https://github.com:443> GitHub
+Username: TristianLipkeBC
+Password for 'TristianLipkeBC':
+
+-----------------------------------------------------------------------
+ATTENTION!  Your password for authentication realm:
+
+   <https://github.com:443> GitHub
+
+can only be stored to disk unencrypted!  You are advised to configure
+your system so that Subversion can store passwords encrypted, if
+possible.  See the documentation for details.
+
+You can avoid future appearances of this warning by setting the value
+of the 'store-plaintext-passwords' option to either 'yes' or 'no' in
+'/users1/st/tlipke/.subversion/servers'.
+-----------------------------------------------------------------------
+Store password unencrypted (yes/no)? yes
+Adding         trunk2
+svn: E160024: Commit failed (details follow):
+svn: E160024: MKCOL not allowed
+[tlipke@sol28 Repo2]$ ls
+branches  conf  db  format  hooks  locks  README.txt  trunk  trunk2
+[tlipke@sol28 Repo2]$ cd ..
+[tlipke@sol28 RepoMeta]$ git status
+# On branch main
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#       Repo2/
+nothing added to commit but untracked files present (use "git add" to track)
+[tlipke@sol28 RepoMeta]$ nano Task2Log.log
+[tlipke@sol28 RepoMeta]$ git status
+# On branch main
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#       Repo2/
+#       Task2Log.log
+nothing added to commit but untracked files present (use "git add" to track)
+[tlipke@sol28 RepoMeta]$ git add Repo2/
+git a[tlipke@sol28 RepoMeta]$ git add Task2Log.log
+[tlipke@sol28 RepoMeta]$ git commit -a
+[main 23c0f3d] message
+ 42 files changed, 992 insertions(+)
+ create mode 100644 Repo2/.svn/entries
+ create mode 100644 Repo2/.svn/format
+ create mode 100644 Repo2/.svn/pristine/45/45f6647a492920d867202eea114afca8328f58f0.svn-base
+ create mode 100644 Repo2/.svn/pristine/c3/c35f3ccd890661a4d662bf248dfc7f803be03282.svn-base
+ create mode 100644 Repo2/.svn/pristine/e5/e5aae09ed0c6c7d36756c512b012f2dbd650453e.svn-base
+ create mode 100644 Repo2/.svn/pristine/e9/e9607f3eaacbb1381f41778290cf32e80ad9da17.svn-base
+ create mode 100644 Repo2/.svn/wc.db
+ create mode 100644 Repo2/README.txt
+ create mode 100644 Repo2/conf/authz
+ create mode 100644 Repo2/conf/passwd
+ create mode 100644 Repo2/conf/svnserve.conf
+ create mode 100644 Repo2/db/current
+ create mode 100644 Repo2/db/format
+ create mode 100644 Repo2/db/fs-type
+ create mode 100644 Repo2/db/fsfs.conf
+ create mode 100644 Repo2/db/min-unpacked-rev
+ create mode 100644 Repo2/db/revprops/0/0
+ create mode 100644 Repo2/db/revs/0/0
+ create mode 100644 Repo2/db/txn-current
+ create mode 100644 Repo2/db/txn-current-lock
+ create mode 100644 Repo2/db/uuid
+ create mode 100644 Repo2/db/write-lock
+ create mode 100644 Repo2/format
+ create mode 100644 Repo2/hooks/post-commit.tmpl
+ create mode 100644 Repo2/hooks/post-lock.tmpl
+ create mode 100644 Repo2/hooks/post-revprop-change.tmpl
+ create mode 100644 Repo2/hooks/post-unlock.tmpl
+ create mode 100644 Repo2/hooks/pre-commit.tmpl
+ create mode 100644 Repo2/hooks/pre-lock.tmpl
+ create mode 100644 Repo2/hooks/pre-revprop-change.tmpl
+ create mode 100644 Repo2/hooks/pre-unlock.tmpl
+ create mode 100644 Repo2/hooks/start-commit.tmpl
+ create mode 100644 Repo2/locks/db-logs.lock
+ create mode 100644 Repo2/locks/db.lock
+ create mode 100644 Repo2/trunk/.file.txt.swp
+ create mode 100644 Repo2/trunk/README.md
+ create mode 100644 Repo2/trunk/Repo1/HelloWorld.class
+ create mode 100644 Repo2/trunk/Repo1/HelloWorld.java
+ create mode 100644 Repo2/trunk/Task1Log.txt
+ create mode 100644 Repo2/trunk/examp.txt
+ create mode 100644 Repo2/trunk2/example.txt
+ create mode 100644 Task2Log.log
+[tlipke@sol28 RepoMeta]$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': TristianLipkeBC
+Password for 'https://TristianLipkeBC@github.com':
+Counting objects: 49, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (34/34), done.
+Writing objects: 100% (48/48), 17.79 KiB | 0 bytes/s, done.
+Total 48 (delta 5), reused 0 (delta 0)
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/TristianLipkeBC/RepoMeta.git
+   38e486a..23c0f3d  main -> main
+[tlipke@sol28 RepoMeta]$ [tlipke@sol28 Repo2]$ svn add trunk2
+A         trunk2
+A         trunk2/example.txt
+[tlipke@sol28 Repo2]$ svn commit
+svn: E205007: Commit failed (details follow):
+svn: E205007: Could not use external editor to fetch log message; consider setting the $SVN_EDITOR environment variable or using the --message (-m) or --file (-F) options
+svn: E205007: None of the environment variables SVN_EDITOR, VISUAL or EDITOR are set, and no 'editor-cmd' run-time configuration option was found
+[tlipke@sol28 Repo2]$ svn commit trunk2
+svn: E205007: Commit failed (details follow):
+bash: [tlipke@sol28: command not found...
+svn: E205007: Could not use external editor to fetch log message; consider setting the $SVN_EDITOR environment variable or using the --message (-m) or --file (-F) options
+svn: E205007: None of the environment variables SVN_EDITOR, VISUAL or EDITOR are set, and no 'editor-cmd' run-time configuration option was found
+[tlipke@sol28 Repo2]$ svn commit -F
+svn: missing argument: F
+Type 'svn help' for usage.
+[tlipke@sol28 Repo2]$ svn commit -m
+svn: missing argument: m
+Type 'svn help' for usage.
+[tlipke@sol28 Repo2]$ svn commit -m 'example'
+Authentication realm: <https://github.com:443> GitHub
+Password for 'tlipke':
+Authentication realm: <https://github.com:443> GitHub
+Username: TristianLipkeBC
+Password for 'TristianLipkeBC':
+
+-----------------------------------------------------------------------
+ATTENTION!  Your password for authentication realm:
+
+   <https://github.com:443> GitHub
+
+can only be stored to disk unencrypted!  You are advised to configure
+your system so that Subversion can store passwords encrypted, if
+possible.  See the documentation for details.
+
+You can avoid future appearances of this warning by setting the value
+of the 'store-plaintext-passwords' option to either 'yes' or 'no' in
+'/users1/st/tlipke/.subversion/servers'.
+-----------------------------------------------------------------------
+Store password unencrypted (yes/no)? yes
+Adding         trunk2
+[tlipke@sol28 RepoMeta]$ A         trunk2
+svn: E160024: Commit failed (details follow):
+svn: E160024: MKCOL not allowed
+[tlipke@sol28 Repo2]$ ls
+branches  conf  db  format  hooks  locks  README.txt  trunk  trunk2
+[tlipke@sol28 Repo2]$ cd ..
+[tlipke@sol28 RepoMeta]$ git status
+# On branch main
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+bash: A: command not found...
+[tlipke@sol28 RepoMeta]$ A         trunk2/example.txt
+bash: A: command not found...
+[tlipke@sol28 RepoMeta]$ [tlipke@sol28 Repo2]$ svn commit
+bash: [tlipke@sol28: command not found...
+[tlipke@sol28 RepoMeta]$ svn: E205007: Commit failed (details follow):
+-bash: syntax error near unexpected token `('
+[tlipke@sol28 RepoMeta]$ svn: E205007: Could not use external editor to fetch log message; consider setting the $SVN_EDITOR environment variable or using the --message (-m) or --file (-F) options
+-bash: syntax error near unexpected token `('
+[tlipke@sol28 RepoMeta]$ svn: E205007: None of the environment variables SVN_EDITOR, VISUAL or EDITOR are set, and no 'editor-cmd' run-time configuration option was found
+#       Repo2/
+nothing added to commit but untracked files present (use "git add" to track)
+[tlipke@sol28 RepoMeta]$ nano Task2Log.log
+[tlipke@sol28 RepoMeta]$ git status
+# On branch main
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#       Repo2/
+#       Task2Log.log
+nothing added to commit but untracked files present (use "git add" to track)
+[tlipke@sol28 RepoMeta]$ git add Repo2/
+git a[tlipke@sol28 RepoMeta]$ git add Task2Log.log
+[tlipke@sol28 RepoMeta]$ git commit -a
+[main 23c0f3d] message
+bash: svn:: command not found...
+Similar command is: 'svn'
+[tlipke@sol28 RepoMeta]$ [tlipke@sol28 Repo2]$ svn commit trunk2
+bash: [tlipke@sol28: command not found...
+[tlipke@sol28 RepoMeta]$ svn: E205007: Commit failed (details follow):
+-bash: syntax error near unexpected token `('
+[tlipke@sol28 RepoMeta]$ svn: E205007: Could not use external editor to fetch log message; consider setting the $SVN_EDITOR environment variable or using the --message (-m) or --file (-F) options
+-bash: syntax error near unexpected token `('
+[tlipke@sol28 RepoMeta]$ svn: E205007: None of the environment variables SVN_EDITOR, VISUAL or EDITOR are set, and no 'editor-cmd' run-time configuration option was found
+bash: svn:: command not found...
+Similar command is: 'svn'
+[tlipke@sol28 RepoMeta]$ [tlipke@sol28 Repo2]$ svn commit -F
+ create mode 100644 Repo2/.svn/wc.db
+ create mode 100644 Repo2/README.txt
+ create mode 100644 Repo2/conf/authz
+ create mode 100644 Repo2/conf/passwd
+ create mode 100644 Repo2/conf/svnserve.conf
+ create mode 100644 Repo2/db/current
+ create mode 100644 Repo2/db/format
+ create mode 100644 Repo2/db/fs-type
+ create mode 100644 Repo2/db/fsfs.conf
+ create mode 100644 Repo2/db/min-unpacked-rev
+ create mode 100644 Repo2/db/revprops/0/0
+ create mode 100644 Repo2/db/revs/0/0
+ create mode 100644 Repo2/db/txn-current
+ create mode 100644 Repo2/db/txn-current-lock
+ create mode 100644 Repo2/db/uuid
+bash: [tlipke@sol28: command not found...
+ create mode 100644 Repo2/db/write-lock
+ create mode 100644 Repo2/format
+ create mode 100644 Repo2/hooks/post-commit.tmpl
+ create mode 100644 Repo2/hooks/post-lock.tmpl
+ create mode 100644 Repo2/hooks/post-revprop-change.tmpl
+ create mode 100644 Repo2/hooks/post-unlock.tmpl
+[tlipke@sol28 RepoMeta]$ svn: missing argument: F
+ create mode 100644 Repo2/hooks/pre-commit.tmpl
+ create mode 100644 Repo2/hooks/pre-lock.tmpl
+ create mode 100644 Repo2/hooks/pre-revprop-change.tmpl
+ create mode 100644 Repo2/hooks/pre-unlock.tmpl
+ create mode 100644 Repo2/hooks/start-commit.tmpl
+ create mode 100644 Repo2/locks/db-logs.lock
+ create mode 100644 Repo2/locks/db.lock
+ create mode 100644 Repo2/trunk/.file.txt.swp
+ create mode 100644 Repo2/trunk/README.md
+ create mode 100644 Repo2/trunk/Repo1/HelloWorld.class
+bash: svn:: command not found...
+Similar command is: 'svn'
+[tlipke@sol28 RepoMeta]$ Type 'svn help' for usage.
+bash: Type: command not found...
+[tlipke@sol28 RepoMeta]$ [tlipke@sol28 Repo2]$ svn commit -m
+bash: [tlipke@sol28: command not found...
+[tlipke@sol28 RepoMeta]$ svn: missing argument: m
+ create mode 100644 Repo2/trunk/Repo1/HelloWorld.java
+ create mode 100644 Repo2/trunk/Task1Log.txt
+ create mode 100644 Repo2/trunk/examp.txt
+ create mode 100644 Repo2/trunk2/example.txt
+ create mode 100644 Task2Log.log
+[tlipke@sol28 RepoMeta]$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --globash: svn:: command not found...
+Similar command is: 'svn'
+[tlipke@sol28 RepoMeta]$ Type 'svn help' for usage.
+
+bash: Type: command not found...
+[tlipke@sol28 RepoMeta]$ [tlipke@sol28 Repo2]$ svn commit -m 'example'
+
+bash: [tlipke@sol28: command not found...
+[tlipke@sol28 RepoMeta]$ Authentication realm: <https://github.com:443> GitHub
+
+-bash: https://github.com:443: No such file or directory
+[tlipke@sol28 RepoMeta]$ Password for 'tlipke':
+
+bash: Password: command not found...
+[tlipke@sol28 RepoMeta]$ Authentication realm: <https://github.com:443> GitHub
+
+-bash: https://github.com:443: No such file or directory
+[tlipke@sol28 RepoMeta]$ Username: TristianLipkeBC
+
+bash: Username:: command not found...
+[tlipke@sol28 RepoMeta]$ Password for 'TristianLipkeBC':
+
+bash: Password: command not found...
+[tlipke@sol28 RepoMeta]$
+
+[tlipke@sol28 RepoMeta]$ -----------------------------------------------------------------------
+
+bash: -----------------------------------------------------------------------: command not found...
+[tlipke@sol28 RepoMeta]$ ATTENTION!  Your password for authentication realm:
+
+bash: ATTENTION!: command not found...
+[tlipke@sol28 RepoMeta]$
+
+[tlipke@sol28 RepoMeta]$    <https://github.com:443> GitHub
+-bash: https://github.com:443: No such file or directory
+[tlipke@sol28 RepoMeta]$
+[tlipke@sol28 RepoMeta]$ can only be stored to disk unencrypted!  You are advised to configure
+bash: can: command not found...
+[tlipke@sol28 RepoMeta]$ your system so that Subversion can store passwords encrypted, if
+bash: your: command not found...
+[tlipke@sol28 RepoMeta]$ possible.  See the documentation for details.
+bash: possible.: command not found...
+[tlipke@sol28 RepoMeta]$
+[tlipke@sol28 RepoMeta]$ You can avoid future appearances of this warning by setting the value
+bash: You: command not found...
+[tlipke@sol28 RepoMeta]$ of the 'store-plaintext-passwords' option to either 'yes' or 'no' in
+bash: of: command not found...
+[tlipke@sol28 RepoMeta]$ '/users1/st/tlipke/.subversion/servers'.
+-bash: /users1/st/tlipke/.subversion/servers.: No such file or directory
+[tlipke@sol28 RepoMeta]$ -----------------------------------------------------------------------
+bash: -----------------------------------------------------------------------: command not found...
+[tlipke@sol28 RepoMeta]$ Store password unencrypted (yes/no)? yes
+-bash: syntax error near unexpected token `('
+[tlipke@sol28 RepoMeta]$ Adding         trunk2
+bash: Adding: command not found...
+[tlipke@sol28 RepoMeta]$ svn: E160024: Commit failed (details follow):
+-bash: syntax error near unexpected token `('
+[tlipke@sol28 RepoMeta]$ svn: E160024: MKCOL not allowed
+bash: svn:: command not found...
+Similar command is: 'svn'
+[tlipke@sol28 RepoMeta]$ [tlipke@sol28 Repo2]$ ls
+bash: [tlipke@sol28: command not found...
+[tlipke@sol28 RepoMeta]$ branches  conf  db  format  hooks  locks  README.txt  trunk  trunk2
+bash: branches: command not found...
+[tlipke@sol28 RepoMeta]$ [tlipke@sol28 Repo2]$ cd ..
+bash: [tlipke@sol28: command not found...
+[tlipke@sol28 RepoMeta]$ [tlipke@sol28 RepoMeta]$ git status
+bash: [tlipke@sol28: command not found...
+[tlipke@sol28 RepoMeta]$ # On branch main
+[tlipke@sol28 RepoMeta]$ # Untracked files:
+[tlipke@sol28 RepoMeta]$ #   (use "git add <file>..." to include in what will be committed)
+[tlipke@sol28 RepoMeta]$ #
+[tlipke@sol28 RepoMeta]$ #       Repo2/
+[tlipke@sol28 RepoMeta]$ nothing added to commit but untracked files present (use "git add" to track)
+-bash: syntax error near unexpected token `('
+[tlipke@sol28 RepoMeta]$ [tlipke@sol28 RepoMeta]$ nano Task2Log.log
+bash: [tlipke@sol28: command not found...
+[tlipke@sol28 RepoMeta]$ [tlipke@sol28 RepoMeta]$ git status
+bash: [tlipke@sol28: command not found...
+[tlipke@sol28 RepoMeta]$ # On branch main
+[tlipke@sol28 RepoMeta]$ # Untracked files:
+[tlipke@sol28 RepoMeta]$ #   (use "git add <file>..." to include in what will be committed)
+[tlipke@sol28 RepoMeta]$ #
+[tlipke@sol28 RepoMeta]$ #       Repo2/
+[tlipke@sol28 RepoMeta]$ #       Task2Log.log
+[tlipke@sol28 RepoMeta]$ nothing added to commit but untracked files present (use "git add" to track)
+-bash: syntax error near unexpected token `('
+[tlipke@sol28 RepoMeta]$ [tlipke@sol28 RepoMeta]$ git add Repo2/
+bash: [tlipke@sol28: command not found...
+[tlipke@sol28 RepoMeta]$ git a[tlipke@sol28 RepoMeta]$ git add Task2Log.log
+git: 'a[tlipke@sol28' is not a git command. See 'git --help'.
+[tlipke@sol28 RepoMeta]$ [tlipke@sol28 RepoMeta]$ git commit -a
+bash: [tlipke@sol28: command not found...
+[tlipke@sol28 RepoMeta]$ [main 23c0f3d] message
+bash: [main: command not found...
+[tlipke@sol28 RepoMeta]$  42 files changed, 992 insertions(+)
+-bash: syntax error near unexpected token `('
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/.svn/entries
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/.svn/format
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/.svn/pristine/45/45f6647a492920d867202eea114afca8328f58f0.svn-base
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/.svn/pristine/c3/c35f3ccd890661a4d662bf248dfc7f803be03282.svn-base
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/.svn/pristine/e5/e5aae09ed0c6c7d36756c512b012f2dbd650453e.svn-base
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/.svn/pristine/e9/e9607f3eaacbb1381f41778290cf32e80ad9da17.svn-base
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/.svn/wc.db
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/README.txt
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/conf/authz
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/conf/passwd
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/conf/svnserve.conf
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/db/current
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/db/format
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/db/fs-type
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/db/fsfs.conf
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/db/min-unpacked-rev
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/db/revprops/0/0
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/db/revs/0/0
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/db/txn-current
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/db/txn-current-lock
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/db/uuid
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/db/write-lock
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/format
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/hooks/post-commit.tmpl
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/hooks/post-lock.tmpl
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/hooks/post-revprop-change.tmpl
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/hooks/post-unlock.tmpl
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/hooks/pre-commit.tmpl
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/hooks/pre-lock.tmpl
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/hooks/pre-revprop-change.tmpl
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/hooks/pre-unlock.tmpl
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/hooks/start-commit.tmpl
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/locks/db-logs.lock
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/locks/db.lock
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/trunk/.file.txt.swp
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/trunk/README.md
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/trunk/Repo1/HelloWorld.class
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/trunk/Repo1/HelloWorld.java
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/trunk/Task1Log.txt
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/trunk/examp.txt
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Repo2/trunk2/example.txt
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$  create mode 100644 Task2Log.log
+bash: create: command not found...
+[tlipke@sol28 RepoMeta]$ [tlipke@sol28 RepoMeta]$ git push
+bash: [tlipke@sol28: command not found...
+[tlipke@sol28 RepoMeta]$ warning: push.default is unset; its implicit value is changing in
+bash: warning:: command not found...
+bash: its: command not found...
+[tlipke@sol28 RepoMeta]$ Git 2.0 from 'matching' to 'simple'. To squelch this message
+bash: Git: command not found...
+Similar command is: 'git'
+[tlipke@sol28 RepoMeta]$ and maintain the current behavior after the default changes, use:
+bash: and: command not found...
+[tlipke@sol28 RepoMeta]$
+[tlipke@sol28 RepoMeta]$   git config --global push.default matching
+[tlipke@sol28 RepoMeta]$
+[tlipke@sol28 RepoMeta]$
+[tlipke@sol28 RepoMeta]$
+[tlipke@sol28 RepoMeta]$   git config --global push.default simple
+[tlipke@sol28 RepoMeta]$
+[tlipke@sol28 RepoMeta]$ S
+bash: S: command not found...
+[tlipke@sol28 RepoMeta]$ (the 'simple' mode was introduced in Git 1.7.11. Use
+> 'current' instead of '
+>
+> Username for 'https://github.com': TristianLipkeBC
+> P
+> Counting objects: 49, don
+> Delta compression using up to 8
+>
+> Writing objects: 100% (48/48), 17.79 KiB | 0 bytes/s, done.
+> Total 48 (d
+> remote: Resolving deltas: 100% (5/5), done.
+> To http
+>
+
